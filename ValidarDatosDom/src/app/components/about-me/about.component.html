@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="offset-lg-4 col-lg-4 col-sm-6 col-12 main-section text-center">
+    <div class="row">
+      <div class="col-lg-12 col-sm-12 col-12 profile-header"></div>
+    </div>
+    <div class="row user-detail">
+      <div class="col-lg-12 col-sm-12 col-12">
+        <img [src]="perfil" class="rounded-circle img-thumbnail" />
+        <h5>{{ nombreC }}</h5>
+        <p><i class="far fa-envelope"></i> {{ correo }}</p>
+
+        <hr />
+        <p><i class="fas fa-phone-square"></i> {{ tel }}</p>
+        <hr />
+        <span
+          >La cotización por una versión completa de esta aplicación, con mas
+          características, saldría alrededor de unos
+          <i class="fas fa-dollar-sign"></i>{{ precio }}
+        </span>
+      </div>
+    </div>
+    <div class="row user-social-detail">
+      <div class="col-lg-12 col-sm-12 col-12"></div>
+    </div>
+  </div>
+</div>

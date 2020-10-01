@@ -1,6 +1,3 @@
-# PWeb-T4
-Tarea 4 de Programacion Web, app en Angular
-
 # ValidarDatosDom
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.

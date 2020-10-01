@@ -1,0 +1,72 @@
+<div class="row spacer">
+  <style>
+    .spacer {
+      flex: 1;
+    }
+    .card-margen {
+      margin-bottom: 2%;
+      margin-right: -5%;
+      margin-left: 5%;
+    }
+    .form-margen {
+      margin-left: 25%;
+    }
+  </style>
+  <!--Mini_form-->
+  <div class="form-inline form-margen">
+    <label class="sr-only" for="cedula">Cedula:</label>
+    <input
+      #validar
+      type="text"
+      class="form-control mb-2 mr-sm-2"
+      id="cedula"
+      placeholder="Ingrese su cedula"
+      (keyup.enter)="getData(validar.value); validar.value = ''"
+    />
+    <button
+      class="btn btn-primary mb-2"
+      (click)="getData(validar.value); validar.value = ''"
+    >
+      Validar
+    </button>
+  </div>
+  <!--End form-->
+  <!--Card-->
+  <div class="col-xs-12 col-sm-7 col-md-5 card-margen">
+    <div class="image-flip">
+      <div class="mainflip flip-0">
+        <div class="frontside">
+          <div class="card" style="width: 20rem">
+            <div class="card-body text-center">
+              <p>
+                <img
+                  class="img-fluid rounded-circle"
+                  [src]="dominican['foto']"
+                  alt="card image"
+                  width="130"
+                  height="130"
+                />
+              </p>
+              <h4 class="card-title">
+                {{ dominican["nombre"] }} {{ dominican["apellido"] }}
+              </h4>
+              <h5 class="card-text">Cedula: {{ dominican["cedula"] }}</h5>
+              <div class="card">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    Nacimiento: {{ dominican["nacimiento"] }}
+                  </li>
+                  <li class="list-group-item">Edad: {{ dominican["edad"] }}</li>
+                  <li class="list-group-item">
+                    Signo Zodiaco: {{ dominican["zodiaco"] }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end card-->
+</div>
